@@ -1,0 +1,157 @@
+#myInvoice{
+    height: 100%;
+    background: #ebebeb;
+    padding:0.1px;
+    
+    
+    .pulldowntext{
+        // 下拉刷新文字
+        height: 1.586667rem;
+        line-height:  1.586667rem;
+        text-align: center;
+        font-size: 0.346667rem;
+        background: #ebebeb;
+    }
+    .invoiceListWrap{
+        width: 9.68rem;
+        height: 2.96rem;
+        .bg-image("../../assets/images/background2");
+        background-size: 100%;
+        margin: .333333rem auto;
+    }
+    .firstRow{
+        height: 1.186667rem;
+        line-height: 1.186667rem;
+        margin-left: .533333rem;
+        padding-top: .18rem;
+        span:nth-child(1){
+            display: inline-block;
+            width: .72rem;
+            height: .72rem;
+            .bg-image("../../assets/images/ticket");
+            background-size: 100%;
+            vertical-align: middle;
+        }
+        span:nth-child(2){
+            margin-left: .28rem;
+            font-size: .4rem;
+        }
+        span:nth-child(3){
+            display: inline-block;
+            width: .533333rem;
+            height: .666667rem;
+            .bg-image("../../assets/images/new");
+            background-size: 100%;
+            float: right;
+            margin-top: -0.066667rem;
+            margin-right: .44rem;
+        }
+    }
+    .seconedRow{
+        margin-left: .533333rem;
+        margin-top: .703333rem;
+        span:nth-child(1){
+            color: rgb(102,102,102);
+            font-size: .346667rem;
+        }
+        span:nth-child(2){
+            float: right;
+            font-size: .346667rem;
+            margin-right: .5rem;
+        }
+    }
+    .thirdRow{
+        margin-left: .533333rem;
+        margin-top: .6rem;
+        span:nth-child(1){
+            color: rgb(102,102,102);
+            font-size: .346667rem;
+        }
+        span:nth-child(2){
+            float: right;
+            font-size: .346667rem;
+            margin-right: .5rem;
+        }
+    }
+    .noMore{
+        width: 2.8rem;
+        font-size: .346667rem;
+        color: rgb(102,102,102);
+        margin: .533333rem auto;
+    }
+
+    // 没有发票时
+    .noInvoice{
+        img{
+            width: 1.466667rem;
+            height: 1.466667rem;
+            margin: 2.4rem 0 0 4.266667rem;
+        }
+        .noWord{
+            color: rgb(102,102,102);
+            font-size: .4rem;
+            margin: .4rem 0 0 3.053333rem;
+        }
+        .noButton{
+            width: 2rem;
+            height: .666667rem;
+            border: 1px solid rgb(0,150,255);
+            border-radius: 30px;
+            line-height: .666667rem;
+            text-align: center;
+            margin: .653333rem 0 0 4rem;
+            color: rgb(0,150,255);
+        }
+    }
+    // 删除弹窗
+    .sortWrap{
+        width: 100%;
+        height: 100%;
+        position:fixed;
+        top:0px;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index: 999;
+        background-color:rgba(0, 0, 0, 0.4); 
+        .windowsW{
+            width: 7.333333rem;
+            height: 3.346667rem;
+            background: #fff;
+            margin: 0 auto;
+            margin-top: 5.52rem;
+            border-radius: .533333rem;
+        }
+        .titleW{
+            // width: 2.726667rem;
+            font-size: .453333rem;
+            // margin: 0 auto;
+            padding-top: .533333rem;
+            margin-left: 2.593333rem;
+        }
+        .detail{
+            font-size: .373333rem;
+            margin-top: .226667rem;
+            margin-left: 1.286667rem;
+        }
+        .btnWrap{
+            height: 1.226667rem;
+            margin-top: .52rem;
+            border-top: 1px solid rgb(228,228,231);
+            span{
+                width: 3.6rem;
+                display: inline-block;
+                line-height: 1.226667rem;
+                text-align: center;
+                font-size: .453333rem;
+                color: rgb(14,128,254);
+            }
+            span:nth-child(1){
+                border-right: 1px solid rgb(228,228,231);
+            }
+            span:nth-child(2){
+                
+            }
+        }
+    } 
+}

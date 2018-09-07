@@ -1,0 +1,377 @@
+/* HTML5 Reset :: style.css ---------------------------------------------------------- We have learned much from/been inspired by/taken code where offered from: Eric Meyer :: http://meyerweb.com HTML5 Doctor :: http://html5doctor.com and the HTML5 Boilerplate :: http://html5boilerplate.com -------------------------------------------------------------------------------*/
+/* Let's default this puppy out -------------------------------------------------------------------------------*/
+html, body, body , span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+	box-sizing: border-box;
+	position:relative;
+	-webkit-overflow-scrolling: touch;
+}
+div{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+	box-sizing: border-box; 
+	-webkit-overflow-scrolling: touch;
+}
+main, article, aside, figure, footer, header, nav, section, details, summary {
+	display: block;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img, object, embed {
+	max-width: 100%;
+}
+/* Note: keeping IMG here will cause problems if you're using foreground images as sprites. In fact, it *will* cause problems with Google Maps' controls at small size. If this is the case for you, try uncommenting the following: #map img {
+	max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+/* we use a lot of ULs that aren't bulleted. you'll have to restore the bullets within content, which is fine because they're probably customized anyway */
+ul{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+	border-bottom: 0.02702702702702703rem dotted #000;
+	cursor: help;
+}
+/* tables still need cellspacing="0" in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+th {
+	font-weight: bold;
+	vertical-align: bottom;
+}
+td {
+	font-weight: normal;
+	vertical-align: top;
+}
+hr {
+	display: block;
+	height: 0.02702702702702703rem ;
+	border: 0;
+	border-top: 0.02702702702702703rem solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+input, select {
+	vertical-align: middle;
+	outline: none;
+	border:1px solid #ccc;
+}
+pre {
+	white-space: pre;
+   /* CSS2 */
+	white-space: pre-wrap;
+   /* CSS 2.1 */
+	white-space: pre-line;
+   /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word;
+   /* IE */
+}
+input[type="text"]{	
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+input[type="checkbox"] {
+	vertical-align: bottom;
+}
+.ie7 input[type="checkbox"] {
+	vertical-align: baseline;
+}
+.ie6 input {
+	vertical-align: text-bottom;
+}
+
+table {
+	font: inherit;
+	font-size: 100% 
+}
+small {
+	font-size: 85%;
+}
+strong {
+	font-weight: normal;
+}
+td, td img {
+	vertical-align: top;
+}
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+	font-family: monospace, sans-serif;
+}
+/* hand cursor on clickable elements */
+.clickable, label, input[type=button], input[type=submit], input[type=file], button {
+	cursor: pointer;
+}
+/* Webkit browsers add a 0.05405405405405406rem margin outside the chrome of form elements */
+button, input, select, textarea {
+	margin: 0;
+}
+/* make buttons play nice in IE */
+button, input[type=button] {
+	width: auto;
+	overflow: visible;
+	border: none;
+	background: transparent 
+}
+/* scale images in IE7 more attractively */
+.ie7 img {
+	-ms-interpolation-mode: bicubic;
+}
+/* prevent BG image flicker upon hover (commented out as usage is rare, and the filter syntax messes with some pre-processors) .ie6 html {
+	filter: expression(document.execCommand("BackgroundImageCache", false, true));
+}
+*/
+/* let's clear some floats */
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility:hidden;
+	zoom:1;
+}
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+#body .mint-toast{
+	z-index: 9999 !important;
+}
+
+/* custom */
+/*公用的*/
+html,body{
+	font-family:"PingFang-SC-Medium,Arial,Verdana,Sans-serif";
+	line-height:1; 
+	width: 100%;height: 100%;
+	background-color: #efeff4;
+}
+/* iPhone 和 Android 的浏览器纵向 (Portrate mode) 和橫向 (Landscape mode) 模式皆有自动调整字体大小的功能。 控制它的就是 CSS 中的 -webkit-text-size-adjust。 */
+body {
+	-webkit-text-size-adjust: 100%;
+	/* // 页面intpu 按钮的tap后变色 */
+	-webkit-tap-highlight-color: transparent;
+	 background-color: #efeff4;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+
+i{
+	font-style:normal;
+	display: inline-block;
+}
+/*兼容IOS overflow滑动 效果  -webkit-overflow-scrolling: touch; */
+/* ::-webkit-scrollbar 滚动条整体部分 ::-webkit-scrollbar-thumb 滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条） ::-webkit-scrollbar-track 滚动条的轨道（里面装有Thumb） ::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的位置。 ::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去） ::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处 ::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件 */
+em{
+	font-style: normal;
+}
+::-webkit-scrollbar {
+	width: 0rem;
+	height:0rem;
+}
+::-webkit-scrollbar-track-piece {
+	background-color: rgba(0, 0, 0, 0.2);
+	-webkit-border-radius: 0rem;
+}
+::-webkit-scrollbar-thumb:vertical {
+	height: 0rem;
+	background-color: rgba(125, 125, 125, 0.7);
+	-webkit-border-radius: 0rem;
+}
+::-webkit-scrollbar-thumb:horizontal {
+	width: 0rem;
+	background-color: rgba(125, 125, 125, 0.7);
+	-webkit-border-radius: 0rem;
+}
+::-webkit-scrollbar:horizontal{
+	height: 0;
+}
+input[readonly="readonly"]{
+	color:#B2B2B2!important;
+}
+input:-webkit-autofill {
+	-webkit-box-shadow : 0 0 0rem 11rem white inset ;
+	box-shadow : 0 0 0rem  11rem white inset ; 
+	height : 0.7297297297297297rem !important ;
+	line-height : 0.7297297297297297rem !important ;
+	border-radius : 0 0.10810810810810811rem 0.10810810810810811rem 0 ;
+}
+/*手机长按取消选中* start*/
+*{
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-html-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+/*解决在IOS上input框无法输入内容的问题*/
+input,textarea{
+   /*webkit浏览器*/
+	-webkit-user-select:auto;
+}
+
+input{    
+    background:none;    
+    outline:none;    
+    border:0px;  
+}  
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {   
+	/* WebKit browsers */   
+   color: rgb(188,188,188);   
+}   
+
+
+/* 样式覆盖 --vux */
+
+/* 全局样式覆盖  弹出框 */
+body /deep/ .weui-dialog{
+	border-radius: 10px;
+}
+body /deep/ .weui-dialog__title{
+	font-size: 0.453333rem
+}
+body /deep/ .weui-dialog__bd{
+	font-size: 0.373333rem;
+}
+body /deep/ .weui-dialog__btn_primary{
+	color:#0e80fe;
+}
+
+/* 全局样式覆盖  Toast */
+
+/* PopupPicker 弹窗框 */
+.vux-popup-header /deep/ .vux-popup-header-left{
+	color: #52ABF7;
+}
+
+.vux-popup-header /deep/ .vux-popup-header-right{
+	color: #52ABF7;
+}
+
+/* 成为商户第二步选择证件类型 */
+#second .weui-cell{
+	opacity: 0;
+}
+#second .vux-cell-box{
+	top: -6.313333rem !important;
+}
+.vux-no-group-title{
+	margin-top:0 !important;
+}
+
+#editInvoice .weui-cells:before{
+	border-top: none !important;
+}
+#editInvoice .weui-cells:after{
+	border-bottom: none !important;
+}
+#editInvoice .vux-no-group-title{
+	margin: 0 !important;
+}
+#editInvoice .weui-cell{
+	top: -2.713333rem;
+	opacity: 0;
+	width: .88rem;
+	float: right;
+	overflow: hidden;
+	right: .466667rem;
+}
+#third .vux-cell-box{
+	top: -7.813333rem;
+}
+#third .weui-cell{
+	opacity: 0;
+}
+
+/* 我的发票右滑删除 */
+#myInvoice .vux-swipeout-content{
+	background: transparent !important;
+}
+#myInvoice .vux-swipeout-button{
+	height: 2.826667rem !important;
+	margin-top: .133333rem !important;
+}
+
+
+/* 公用样式  去除多余的44px */
+.routerView-44px{
+	height: calc(100% - 1.173333rem)!important;
+}
+
+/* 公用样式  betterscroll 的wrapper样式 */
+.wrapper{
+	height: 100%;
+	background: #ebebeb;
+}
+
+/* 下拉刷新 */
+._v-container{
+	top: 2.666667rem !important;
+}
+
+/* 没有更多了 */
+.loading-layer{
+	height: 3.133333rem !important;
+	margin-top: .983333rem;
+	bottom: 1.866667rem;
+	line-height: 3.133333rem !important;
+	font-size: 0.346667rem !important;
+	color: #000 !important;
+}
+.no-data-text{
+	color: black !important;
+}

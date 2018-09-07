@@ -1,0 +1,92 @@
+
+.bg-image( @color ){  
+  background-repeat: no-repeat;
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.0), only screen and (min-device-pixel-ratio:2.0){
+    background-image: ~'url(@{color}@2x.png)';
+  }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 5){
+    background-image: ~'url(@{color}@3x.png)';
+  }
+}
+
+   
+ 
+
+//文本省略号 --- 显示一行
+
+.textIndex1(@w) {
+    width: @w;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+//文本省略号 --- 显示两行
+.textIndex2(@w ,
+@clamp: 2) {
+    width: @w;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    display: -webkit-box;
+    -webkit-line-clamp: @clamp;
+    -webkit-box-orient: vertical; 
+    line-height:initial;
+    white-space:normal
+
+}
+
+ 
+ 
+
+.border-1pxA(@color) {
+  position: relative;
+  border: 1px  solid @color;
+}
+
+ 
+
+.border-1pxT(@color) {
+  position: relative;
+  &:before {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-top:  1px   solid @color;
+    content: " ";
+  }
+}
+
+.border-1pxB(@c) {
+  position: relative;
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom:  1px   solid @c;
+    content: " ";
+  }
+}
+
+
+
+.border-none() {
+  &:after {
+    display: none;
+  }
+}
+.sanB(@c:black){
+  &:after {
+    display: block;
+    position: absolute;
+    top: -0.48rem;
+    right:0.24rem;
+    border:0.24rem solid  transparent;
+    border-bottom: 0.24rem solid @c;
+    content: " ";
+  }
+}
